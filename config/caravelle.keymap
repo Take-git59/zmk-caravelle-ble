@@ -1,3 +1,4 @@
+#include <macros.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
@@ -11,16 +12,16 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <
-                &kp INT5    // 無変換
-                &kp LANG2   // 英数
+                &kp NFER    // 無変換
+                &kp AE      // 英数
             >;
         };
         macro_henk_kana: macro_henk_kana {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <
-                &kp INT4    // 変換
-                &kp LANG1   // かな
+                &kp HENK    // 変換
+                &kp KANA    // かな
             >;
         };          
     };
