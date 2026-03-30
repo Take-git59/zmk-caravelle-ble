@@ -3,25 +3,9 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    macros {
-        macro_nomu_eisu: macro_nomu_eisu {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <
-                &kp NFER    // 無変換
-                &kp AE      // 英数
-            >;
-        };
-        macro_henk_kana: macro_henk_kana {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <
-                &kp HENK    // 変換
-                &kp KANA    // かな
-            >;
-        };          
-    };
-
+    // ========== 1. カスタムビヘイビアの定義 ==========
+    // デフォルトのMod-Tap(&mt)の挙動を上書きし、QMK風の快適な設定に変更します
+    /*
     behaviors {
         mt: mod_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -47,8 +31,6 @@
             bindings = <&kp>, <&kp>;
         };
 
-
-
         // Alt + ` マクロ (ALT_GRV) の定義
         // 日本語入力のオンオフで、ChromeでAltキーが暴発するための対策マクロ
         alt_grav_macro: alt_grav_macro {
@@ -70,10 +52,10 @@
 
         default_layer {
             bindings = <
-&mt LALT ESC        &kp Q    &kp W    &kp E    &kp R    &kp T                      &kp Y     &kp U     &kp I  &kp O  &kp P      &kp LBKT
-&mt LCTRL TAB       &kp A    &kp S    &kp D    &kp F    &kp G  &kp LPAR  &kp RPAR  &kp H  &kp J  &kp K      &kp L     &kp MINUS  &kp SQT
-&mt LSHIFT GRAVE    &kp Z    &kp X    &kp C    &kp V    &kp B  &kp LBRC  &kp RBRC  &kp N  &kp M  &kp COMMA  &kp DOT   &kp SLASH  &kp RSHIFT
-                    &kp LALT &kp LGUI &mt &macro_nomu_eisu &MO 1  &mt RCTRL ENTER  &mo 3  &kp TAB   &kp LALT
+&mt LGUI ESC    &kp Q          &kp W  &kp E                 &kp R            &kp T  &kp Y     &kp U     &kp I  &kp O  &kp P      &kp LBKT
+&mt LCTRL TAB   &kp A          &kp S  &kp D                 &kp F            &kp G  &kp LPAR  &kp RPAR  &kp H  &kp J  &kp K      &kp L     &kp MINUS  &kp SQT
+&kp LEFT_SHIFT  &kp Z          &kp X  &kp C                 &kp V            &kp B  &kp LBRC  &kp RBRC  &kp N  &kp M  &kp COMMA  &kp DOT   &kp SLASH  &kp RSHIFT
+&mo 3           &mt LALT BSPC  &mo 1  &mt LEFT_SHIFT SPACE  &mt RCTRL ENTER  &mo 2  &kp TAB   &kp LALT
             >;
         };
 
