@@ -61,6 +61,16 @@
                 , <&macro_release &kp LALT>
                 ;
         };
+
+        none: none {
+            compatible = "zmk,behavior-none";
+            #binding-cells = <0>;
+        };
+        trans: trans {
+            compatible = "zmk,behavior-transparent";
+            #binding-cells = <0>;
+        };
+
     };
     // Definitions moved to #define macros
     // ========== 2. キーマップレイヤーの定義 ==========
