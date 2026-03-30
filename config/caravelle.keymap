@@ -11,8 +11,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <
-                &kp NFER
-                &kp AE
+                &kp INT5
+                &kp LANG2
             >;
         };
         macro_henk_kana: macro_henk_kana {     // 変換→カナ
