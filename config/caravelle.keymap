@@ -4,9 +4,6 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    // ========== 1. マクロ・カスタムビヘイビアの定義 ==========
-    // デフォルトのMod-Tap(&mt)の挙動を上書きし、QMK風の快適な設定に変更します
-    /*
     macros {
         macro_nomu_eisu: macro_nomu_eisu {
             compatible = "zmk,behavior-macro";
