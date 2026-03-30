@@ -7,25 +7,6 @@
     // デフォルトのMod-Tap(&mt)の挙動を上書きし、QMK風の快適な設定に変更します
     /*
 
-    macros {
-        macro_nomu_eisu: macro_nomu_eisu {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <
-                &kp NFER    // 無変換
-                &kp AE      // 英数
-            >;
-        };
-        macro_henk_kana: macro_henk_kana {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <
-                &kp HENK    // 変換
-                &kp KANA    // かな
-            >;
-        };          
-    };
-
     behaviors {
         mt: mod_tap {
             compatible = "zmk,behavior-hold-tap";
