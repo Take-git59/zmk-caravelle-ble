@@ -52,9 +52,9 @@
 
         default_layer {
             bindings = <
-&mt LALT ESC    &kp Q          &kp W  &kp E                 &kp R            &kp T  &kp Y     &kp U     &kp I  &kp O  &kp P      &kp BACKSPACE
-&mt LCTRL TAB   &kp A          &kp S  &kp D                 &kp F            &kp G  &kp LPAR  &kp RPAR  &kp H  &kp J  &kp K      &kp L     &kp SEMI   &mt RCTRL ENTER
-&mt LSHIFT GRAVE &kp Z         &kp X  &kp C                 &kp V            &kp B  &kp LBRC  &kp RBRC  &kp N  &kp M  &kp COMMA  &kp DOT   &kp SLASH  &mt RSHIFT DELETE
+&mt LALT ESC     &kp Q	&kp W	&kp E                 &kp R            &kp T  &kp Y     &kp U     &kp I  &kp O  &kp P      &kp BACKSPACE
+&mt LCTRL TAB    &kp A	&kp S	&kp D                 &kp F            &kp G  &kp LPAR  &kp RPAR  &kp H  &kp J  &kp K      &kp L     &kp SEMI   &mt RCTRL ENTER
+&mt LSHIFT GRAVE &kp Z	&kp X	&kp C                 &kp V            &kp B  &kp LBRC  &kp RBRC  &kp N  &kp M  &kp COMMA  &kp DOT   &kp SLASH  &mt RSHIFT DELETE
 &kp LALT         &kp LGUI  &lt 2 INT5 &lt 4 SPACE  &mt RSHIFT ENTER  &lt 3 INT4  &kp LALT   &to 1
             >;
         };
@@ -83,7 +83,7 @@
             >;
         };
 
-        // レイヤー 2: _RAISE
+        // レイヤー 3: _RAISE
 
         raise_layer {
             bindings = <
@@ -94,7 +94,7 @@
             >;
         };
 
-        // レイヤー 3: _ADJUST
+        // レイヤー 4: _ADJUST
 
         adjust_layer {
             bindings = <
