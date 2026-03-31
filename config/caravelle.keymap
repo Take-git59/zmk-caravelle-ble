@@ -52,14 +52,14 @@
 
         default_layer {
             bindings = <
-&mt LALT ESC     &kp Q	&kp W	&kp E                 &kp R            &kp T  &kp Y     &kp U     &kp I  &kp O  &kp P      &kp BACKSPACE
-&mt LCTRL TAB    &kp A	&kp S	&kp D                 &kp F            &kp G  &kp LPAR  &kp RPAR  &kp H  &kp J  &kp K      &kp L     &kp SEMI   &mt RCTRL ENTER
-&mt LSHIFT GRAVE &kp Z	&kp X	&kp C                 &kp V            &kp B  &kp LBRC  &kp RBRC  &kp N  &kp M  &kp COMMA  &kp DOT   &kp SLASH  &mt RSHIFT DELETE
-&kp LALT         &kp LGUI  &lt 2 INT5 &lt 4 SPACE  &mt RSHIFT ENTER  &lt 3 INT4  &kp LALT   &to 1
+&mt LALT ESC      &kp Q     &kp W       &kp E        &kp R             &kp T       &kp Y     &kp U     &kp I  &kp O  &kp P      &kp BACKSPACE
+&mt LCTRL TAB     &kp A     &kp S       &kp D        &kp F             &kp G       &kp LPAR  &kp RPAR  &kp H  &kp J  &kp K      &kp L          &kp SEMI   &mt RCTRL ENTER
+&mt LSHIFT GRAVE  &kp Z     &kp X       &kp C        &kp V             &kp B       &kp LBRC  &kp RBRC  &kp N  &kp M  &kp COMMA  &kp DOT        &kp SLASH  &mt RSHIFT DELETE
+&kp LALT          &kp LGUI  &lt 2 INT5  &lt 4 SPACE  &mt RSHIFT ENTER  &lt 3 INT4  &kp LALT  &to 1
             >;
         };
 
-	// レイヤー 1: _Mac
+        // レイヤー 1: _Mac
 
         Mac_layer {
             bindings = <
@@ -70,16 +70,14 @@
             >;
         };
 
-
-
         // レイヤー 2: _LOWER
 
         lower_layer {
             bindings = <
-&trans  &kp N1           &kp N2  &kp N3  &kp N4  &kp N5   &kp N6   &kp N7  &kp N8           &kp N9        &kp N0         &trans
-&trans  &kp PRINTSCREEN  &kp F2  &kp F3  &kp F4  &kp F5   &kp F11  &trans  &kp LEFT         &kp DOWN      &kp UP_ARROW   &kp RIGHT          &kp PAGE_UP    &kp HOME
+&trans  &kp N1           &kp N2  &kp N3  &kp N4  &kp N5        &kp N6   &kp N7  &kp N8           &kp N9        &kp N0         &trans
+&trans  &kp PRINTSCREEN  &kp F2  &kp F3  &kp F4  &kp F5        &kp F11  &trans  &kp LEFT         &kp DOWN      &kp UP_ARROW   &kp RIGHT          &kp PAGE_UP    &kp HOME
 &trans  &kp F6           &kp F7  &kp F8  &kp F9  &mt LALT F10  &kp F12  &trans  &kp LC(PAGE_UP)  &kp LS(LEFT)  &kp LS(RIGHT)  &kp LC(PAGE_DOWN)  &kp PAGE_DOWN  &kp END
-&trans  &mt LALT DEL     &trans  &trans  &trans  &trans   &trans   &trans
+&trans  &mt LALT DEL     &trans  &trans  &trans  &trans        &trans   &trans
             >;
         };
 
@@ -88,8 +86,8 @@
         raise_layer {
             bindings = <
 &trans  &kp LS(EXCL)     &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)      &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &kp LS(LPAR)    &kp LS(RPAR)          &trans
-&trans  &kp LC(LA(DEL))  &none       &none          &kp LA(F4)    &kp SQT            &trans         &trans        &kp EQUAL     &kp MINUS       &kp NON_US_BACKSLASH  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp GRAVE
-&trans  &kp LA(GRAVE)    &none       &none          &none         &kp DOUBLE_QUOTES  &trans         &trans        &kp PLUS      &kp UNDERSCORE  &kp PIPE              &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp TILDE
+&trans  &kp LC(LA(DEL))  &none       &none          &kp LA(F4)    &kp SQT            &kp PAGE_UP    &trans        &kp EQUAL     &kp MINUS       &kp NON_US_BACKSLASH  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp GRAVE
+&trans  &kp LA(GRAVE)    &none       &none          &none         &kp DOUBLE_QUOTES  &kp PAGE_DOWN  &trans        &kp PLUS      &kp UNDERSCORE  &kp PIPE              &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp TILDE
 &trans  &trans           &trans      &trans         &mo 2         &trans             &trans         &trans
             >;
         };
@@ -101,7 +99,8 @@
 &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none            &kp LS(INSERT)  &kp LS(KP_NUMBER_7)  &kp LS(KP_NUMBER_8)  &kp LS(KP_NUMBER_9)  &kp LS(RPAR)     &trans
 &trans        &bt BT_DISC 1   &none         &none         &none         &none            &trans          &trans               &kp EQUAL            &kp KP_NUMBER_4      &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp COLON   &kp F2
 &trans        &bt BT_CLR_ALL  &none         &none         &none         &none            &trans          &trans               &kp PLUS             &kp KP_NUMBER_1      &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD  &kp F4
-&trans        &trans          &trans        &trans        &mo 2         &kp KP_NUMBER_0  &trans          &trans            >;
+&trans        &trans          &trans        &trans        &mo 2         &kp KP_NUMBER_0  &trans          &trans
+            >;
         };
     };
 };
