@@ -61,28 +61,28 @@
 
         Mac_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &to 0
+&trans  &trans  &trans       &trans  &trans  &trans       &trans     &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans       &trans  &trans  &trans       &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans       &trans  &trans  &trans       &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &lt 2 LANG2  &trans  &trans  &lt 3 LANG1  &kp GLOBE  &to 0
             >;
         };
 
         lower_layer {
             bindings = <
-&trans  &kp N1        &kp N2   &kp N3     &kp N4    &kp N5   &kp N6   &kp N7  &kp N8  &kp N9  &kp N0   &trans
-&trans  &kp PSCRN     &kp F2   &kp F3     &kp F4    &kp F5   &mo 0   &trans    &kp LEFT     &kp DOWN  &kp UP  &kp RIGHT  &kp PAGE_UP &kp HOME
-&trans  &kp F6        &kp F7   &kp F8     &kp F9    &kp F10  &trans  &trans    &none          &none        &none     &none   &kp PAGE_DOWN  &kp END
-&trans  &mt LALT DEL  &trans   &trans     &trans    &trans   &trans  &trans
+&trans  &kp N1     &kp N2  &kp N3  &kp N4  &kp N5   &kp N6  &kp N7  &kp N8           &kp N9        &kp N0         &trans
+&trans  &kp PSCRN  &kp F2  &kp F3  &kp F4  &kp F5   &mo 0   &trans  &kp LEFT         &kp DOWN      &kp UP         &kp RIGHT          &kp PAGE_UP    &kp HOME
+&trans  &kp F6     &kp F7  &kp F8  &kp F9  &kp F10  &trans  &trans  &kp LC(PAGE_UP)  &kp LS(LEFT)  &kp LS(RIGHT)  &kp LC(PAGE_DOWN)  &kp PAGE_DOWN  &kp END
+&trans  &trans     &trans  &trans  &trans  &trans   &trans  &trans
             >;
         };
 
         raise_layer {
             bindings = <
-&trans  &kp N1  &kp N2  &kp N3   &kp N4  &kp N5   &kp N6  &kp N7  &kp N8     &kp N9    &kp N0     &trans
-&trans  &none   &none   &kp ESC  &none   &kp TAB  &trans  &trans  &kp LBKT   &kp RBKT  &kp SLASH  &kp EQUAL  &kp MINUS  &trans
-&trans  &none   &none   &none    &none   &none    &trans  &trans  &kp GRAVE  &kp BSLH  &none      &none      &none      &trans
-&trans  &trans  &trans  &trans   &trans  &trans   &trans  &trans
+&trans  &kp EXCL            &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT        &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+&trans  &kp LC(LA(DELETE))  &none   &none     &kp LA(F4)  &kp SQT            &trans     &trans         &kp EQUAL     &kp MINUS             &kp NON_US_BACKSLASH   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp GRAVE
+&trans  &none               &none   &none     &none       &kp DOUBLE_QUOTES  &trans     &trans         &kp PLUS      &kp UNDERSCORE        &kp PIPE               &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp TILDE
+&trans  &trans              &trans  &trans    &mo 2       &trans             &trans     &trans
             >;
         };
 
