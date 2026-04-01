@@ -52,25 +52,30 @@
 
         default_layer {
             bindings = <
-&mt LGUI ESC    &kp Q          &kp W  &kp E                 &kp R            &kp T  &kp Y     &kp U     &kp I  &kp O  &kp P      &kp LBKT
-&mt LCTRL TAB   &kp A          &kp S  &kp D                 &kp F            &kp G  &kp LPAR  &kp RPAR  &kp H  &kp J  &kp K      &kp L     &kp MINUS  &kp SQT
-&kp LEFT_SHIFT  &kp Z          &kp X  &kp C                 &kp V            &kp B  &kp LBRC  &kp RBRC  &kp N  &kp M  &kp COMMA  &kp DOT   &kp SLASH  &kp RSHIFT
-&mo 3           &mt LALT BSPC  &mo 1  &mt LEFT_SHIFT SPACE  &mt RCTRL ENTER  &mo 2  &kp TAB   &kp LALT
+&mt LEFT_ALT ESC      &kp Q         &kp W               &kp E        &kp R                  &kp T             &kp Y          &kp U     &kp I  &kp O  &kp P      &kp BACKSPACE
+&mt LCTRL TAB         &kp A         &kp S               &kp D        &kp F                  &kp G             &kp LPAR       &kp RPAR  &kp H  &kp J  &kp K      &kp L          &kp SEMICOLON  &mt RIGHT_CONTROL ENTER
+&mt LEFT_SHIFT GRAVE  &kp Z         &kp X               &kp C        &kp V                  &kp B             &kp LBRC       &kp RBRC  &kp N  &kp M  &kp COMMA  &kp DOT        &kp SLASH      &mt RSHIFT DELETE
+&kp LEFT_ALT          &kp LEFT_GUI  &lt 2 INT_MUHENKAN  &lt 4 SPACE  &mt RIGHT_SHIFT ENTER  &lt 3 INT_HENKAN  &kp RIGHT_ALT  &to 1
             >;
         };
 
-        // レイヤー 1: _LOWER
+        Mac_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
 
         lower_layer {
             bindings = <
 &trans  &kp F1        &kp F2   &kp F3     &kp F4    &kp F5   &none   &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END   &trans
-&trans  &kp F6        &kp F7   &kp F8     &kp F9    &kp F10  &mo 3   &trans    &none          &kp LEFT     &kp DOWN  &kp UP  &kp RIGHT  &trans
+&trans  &kp F6        &kp F7   &kp F8     &kp F9    &kp F10  &mo 0   &trans    &none          &kp LEFT     &kp DOWN  &kp UP  &kp RIGHT  &trans
 &trans  &kp F11       &kp F12  &kp PSCRN  &kp SLCK  &kp INS  &trans  &trans    &none          &none        &none     &none   &none      &trans
 &trans  &mt LALT DEL  &trans   &trans     &trans    &trans   &trans  &trans
             >;
         };
-
-        // レイヤー 2: _RAISE
 
         raise_layer {
             bindings = <
@@ -81,14 +86,12 @@
             >;
         };
 
-        // レイヤー 3: _ADJUST
-
         adjust_layer {
             bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4  &bt BT_SEL 5  &none  &none  &none  &none  &none  &trans
-&none         &none         &none         &bt BT_CLR_ALL  &bt BT_CLR    &trans        &none  &none  &none  &none  &none  &none   &sys_reset  &none
-&none         &none         &none         &trans          &none         &none         &none  &none  &none  &none  &none  &trans  &trans      &trans
-&trans        &trans        &trans        &trans          &trans
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4  &bt BT_SEL 4     &kp KP_EQUAL  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp COMMA        &none
+&none         &none         &none         &bt BT_CLR_ALL  &bt BT_CLR    &none            &none         &none            &kp LOCKING_NUM  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp COLON   &kp F2
+&none         &none         &none         &none           &none         &none            &none         &none            &kp KP_PLUS      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD  &kp F4
+&none         &none         &none         &none           &none         &kp KP_NUMBER_0  &none         &none
             >;
         };
     };
